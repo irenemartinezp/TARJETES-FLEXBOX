@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tarjetas_flexbox</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            min-height: 100%;
+        }
+        img{
+            width: 100%
+        }
+        body{
+            font-family: "georgia", "cursive";
+            font-size: 18px;
+            background: linear-gradient(380deg,pink,purple);
+            color: purple;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding: 2em 4em;
+            justify-content: center;
+        }
+        .dissenyador{
+            width: 25em;
+            background: rgba(240,240,240,0.9);
+            border-radius: 20px;
+            margin: 2em;
+            box-shadow:0 0 20px purple;
+            display: flex;
+            flex-direction: column;
+        }
+        .disenyador_img{
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            height: 200px;
+            background: purple;
+            overflow:hidden
+        }
+        .disenyador_img img{
+            height: 100%;
+            object-fit:cover;
+            border-radius: 20px 20px 0  0;
+            filter: grayscale(100%);
+            mix-blend-mode:lighten;
+        }
+        .disenyador: first-child .disenyador_img img{
+            object-position: top;
+        }
+        .disenyador: last-child .disenyador_img img{
+            object-position: left;
+           }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid purple;
+            align-items: baseline;
+        }
+        h3{
+            font-style: italic;
+            font-weight: bold;
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+         .disenyador_contingut{
+            text-align: justify;
+             hyphens: auto;
+             margin: 0.5em 1em 0.5em 1em;
+             font-size: 0.9em;
+             line-height: 1.4em; 
+             flex-grow: 1;
+        }
+        footer{
+            background:purple;
+            color:white;
+            font-size 0.9em;
+            font-style: italic;
+            border-radius: 0 0  20px 20px;
+            padding: 0.6em;
+        }
+        @media(max-width: 600px){
+            body{
+                font-size: 16px;
+            } 
+            .container{
+            flex-direction: column;          
+            }
+        }         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dissenyador">
+            <div class="disenyador_img">
+              <img src="img/img-1290.jpeg"
+              alt="Casey Reas">
+            </div>
+            <header>
+                <h3>Casey Reas</h3>
+                <span> 1972</span>
+            </header>
+            <p class="disenyador_contingut">
+               Casey Edwin Barker Reas (nacido en 1972), también conocido como C. E. B. Reas o Casey Reas,es un artista estadounidense cuyas obras de arte conceptual, procesal y minimalista exploran ideas a través de la lente contemporánea del software. Reas es quizás mejor conocido por haber creado, con Ben Fry, el lenguaje de programación Processing.El procesamiento es ampliamente utilizado por miles de artistas y diseñadores en todo el mundo, y por educadores que enseñan los fundamentos de la programación en escuelas de arte y diseño.
+            </p>
+            
+            <footer class="dissenyador_peu">
+                En 2003, Reas se mudó a Los Ángeles, donde actualmente es profesor en el Departamento de Diseño de Artes de los Medios en la Universidad de California, Los Ángeles.
+            </footer>
+        </div>
+        <div class="dissenyador">
+         <div class="disenyador_img">
+         <img src="img/c8cb7b11d4f4df6a21290ba35d4356b2.jpg" alt="Milton Glaser">
+        </div>
+        <header>
+            <h3>Milton Glaser</h3>
+            <span>1929</span>
+        </header>
+        <p class="disenyador_contingut">
+                26 de junio de 1929 en el Bronx de Nueva York), es un ilustrador y diseñador muy prolífico conocido sobre todo por sus diseños para discos y libros.Glaser estudió en la conocida Cooper Union entre 1948 y 1951 Y a través de una beca Fulbright, también estudió en la Academia de Bellas Artes de Bolonia, en Italia, donde estuvo con el pintor Giorgio Morandi. Fundó con Seymour Chwast el Push Pin Studio para, en 1974, crear su propia compañía.
+
+            </p>
+            <footer class="dissenyador_peu">
+                Ha creado más de 300 carteles entre los que se cuenta el famoso de Bob Dylan, un símbolo de los años sesenta. Glaser se ha dedicado al diseño editorial y a la identidad corporativa.
+            </footer>
+    </div>
+</div>
+</body>
+</html>
